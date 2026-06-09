@@ -26,7 +26,7 @@
 | --- | --- |
 | `EMAIL_SENDER` | 发件邮箱。建议使用 QQ 邮箱 |
 | `EMAIL_PASSWORD` | 邮箱 SMTP 授权码，不是登录密码 |
-| `EMAIL_RECIPIENT` | 收件邮箱 |
+| `EMAIL_RECIPIENT` | 收件邮箱。你的目标邮箱填 `565867096@qq.com` |
 | `SMTP_SERVER` | QQ 邮箱填 `smtp.qq.com` |
 | `SMTP_PORT` | QQ 邮箱填 `465` |
 
@@ -34,15 +34,11 @@ QQ 邮箱授权码位置：
 
 `QQ邮箱 → 设置 → 账号 → POP3/IMAP/SMTP 服务 → 开启 SMTP → 生成授权码`
 
-## 可选变量
+## 当前默认参数
 
-进入：
+这些参数已经写在脚本里，不需要你额外填写。
 
-`Settings → Secrets and variables → Actions → Variables → New repository variable`
-
-可以添加下面几个变量。不填也能跑。
-
-| Variable 名称 | 默认值 | 作用 |
+| 参数 | 默认值 | 作用 |
 | --- | --- | --- |
 | `LOOKBACK_HOURS` | `36` | 每次搜索最近多少小时内的线索 |
 | `MAX_ITEMS` | `12` | 每封邮件最多发送多少条 |
