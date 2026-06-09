@@ -14,6 +14,17 @@
 - 邮件发送失败或配置缺失时，在 Actions 日志里给出明确错误。
 - 没有新增内容时，默认也会发送一封“今日无新增”的日报，证明任务正常运行。
 
+## 当前邮箱配置
+
+你希望使用下面这套配置：
+
+| 项目 | 值 |
+| --- | --- |
+| 发件邮箱 | `qiankun19950410@gmail.com` |
+| 收件邮箱 | `565867096@qq.com` |
+| SMTP 服务器 | `smtp.gmail.com` |
+| SMTP 端口 | `465` |
+
 ## 必须填写的 GitHub Secrets
 
 进入仓库：
@@ -24,15 +35,13 @@
 
 | Secret 名称 | 填什么 |
 | --- | --- |
-| `EMAIL_SENDER` | 发件邮箱。建议使用 QQ 邮箱 |
-| `EMAIL_PASSWORD` | 邮箱 SMTP 授权码，不是登录密码 |
-| `EMAIL_RECIPIENT` | 收件邮箱。你的目标邮箱填 `565867096@qq.com` |
-| `SMTP_SERVER` | QQ 邮箱填 `smtp.qq.com` |
-| `SMTP_PORT` | QQ 邮箱填 `465` |
+| `EMAIL_SENDER` | `qiankun19950410@gmail.com` |
+| `EMAIL_PASSWORD` | Gmail 应用专用密码，不是 Gmail 登录密码 |
+| `EMAIL_RECIPIENT` | `565867096@qq.com` |
+| `SMTP_SERVER` | `smtp.gmail.com` |
+| `SMTP_PORT` | `465` |
 
-QQ 邮箱授权码位置：
-
-`QQ邮箱 → 设置 → 账号 → POP3/IMAP/SMTP 服务 → 开启 SMTP → 生成授权码`
+Gmail 不能直接用账号登录密码发 SMTP。通常需要开启两步验证，然后在 Google 账号里生成“应用专用密码”，再把这个应用专用密码填到 `EMAIL_PASSWORD`。
 
 ## 当前默认参数
 
